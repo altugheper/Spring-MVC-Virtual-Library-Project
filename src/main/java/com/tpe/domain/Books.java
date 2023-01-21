@@ -4,13 +4,11 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "t_student")
-public class Student {
+@Table(name = "t_books")
+public class Books {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,10 +23,10 @@ public class Student {
 
     private LocalDateTime createDate = LocalDateTime.now();
 
-    public Student() {
+    public Books() {
     }
 
-    public Student(Long id, String bookName, String author, LocalDateTime createDate) {
+    public Books(Long id, String bookName, String author, LocalDateTime createDate) {
         this.id = id;
         this.bookName = bookName;
         this.author = author;

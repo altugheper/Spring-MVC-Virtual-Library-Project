@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tpe</groupId>
-  <artifactId>springmvc</artifactId>
+  <artifactId>libraryproject</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>springmvc Maven Webapp</name>
+  <name>libraryproject Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
     <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -97,6 +97,6 @@
 
   </dependencies>
   <build>
-    <finalName>springmvc</finalName>
+    <finalName>libraryproject</finalName>
   </build>
 </project>
