@@ -14,8 +14,8 @@
 <body>
 <div class="container">
 <h2>VIRTUAL LIBRARY</h2>
-<p><a class="normal" href="${pageContext.request.contextPath}/students/">List Books</a></p>
-<p><a class="normal" href="${pageContext.request.contextPath}/students/new">Add Book</a></p>
+<p><a class="normal" href="${pageContext.request.contextPath}/books/">List Books</a></p>
+<p><a class="normal" href="${pageContext.request.contextPath}/books/new">Add Book</a></p>
 </div>
 </body>
 </html>

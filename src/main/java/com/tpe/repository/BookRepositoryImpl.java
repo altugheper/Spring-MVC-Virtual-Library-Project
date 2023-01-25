@@ -34,21 +34,51 @@ public class BookRepositoryImpl implements BookRepository{
 
     @Override
     public Optional<Books> findById(Long id) {
-        return Optional.empty();
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+        Books books = session.get(Books.class,id);
+        Optional<Books> opt;
+        opt = Optional.ofNullable(books);
+
+
+        tx.commit();
+        session.close();
+        return opt;
     }
 
     @Override
     public void save(Books books) {
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
 
+        session.saveOrUpdate(books);
+
+        tx.commit();
+        session.close();
     }
 
     @Override
     public void update(Books books) {
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+
+        session.update(books);
+
+        tx.commit();
+        session.close();
 
     }
 
     @Override
     public void delete(Long id) {
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+
+        Books books = session.load(Books.class,id);
+        session.delete(books);
+
+        tx.commit();
+        session.close();
 
     }
 }
