@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="container">
-		<h2>Students</h2>
+		<h2>Books</h2>
 		<table>
 
 			<tr style="background-color: lightblue">
@@ -26,12 +26,12 @@
 			<c:forEach items="${courses}" var="course" varStatus="status">
 
 				<!-- create an "update" link with Student id -->
-				<c:url var="updateLink" value="/courses/update">
-					<c:param name="id" value="${course.id}" />
+				<c:url var="updateLink" value="/books/update">
+					<c:param name="id" value="${books.id}" />
 				</c:url>
 
 				<!-- create an "delete" link with Course id -->
-				<c:url var="deleteLink" value="/courses/delete">
+				<c:url var="deleteLink" value="/books/delete">
 					<c:param name="id" value="${course.id}" />
 				</c:url>
 
@@ -46,14 +46,14 @@
 						<!-- show the links --> 
 						 
 						<a class="update" href="${updateLink}">Update</a> 
-						<a class="delete" href="${pageContext.request.contextPath}/courses/delete/${course.id}">Delete</a>
+						<a class="delete" href="${pageContext.request.contextPath}/books/delete/${books.id}">Delete</a>
 						<!--   <a class="delete" href="${deleteLink}"> Delete</a>-->
 					</td>
 
 				</tr>
 			</c:forEach>
 		</table>
-		<p><a class="normal" href="${pageContext.request.contextPath}/courses/new">Add Student</a>
+		<p><a class="normal" href="${pageContext.request.contextPath}/books/new">Add a Book</a>
 	</div>
 </body>
 </html>

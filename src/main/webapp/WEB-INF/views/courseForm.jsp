@@ -13,10 +13,10 @@
 <body>
 	<div class="container">
 		<div align="center">
-			<h2>Add / Update Course</h2>
+			<h2>Add / Update Book</h2>
 			<table>
-				<form:form modelAttribute="course" action="saveCourse" method="post">
-					<form:hidden path="id" />
+				<form:form modelAttribute="book" action="createBooks" method="post">
+                <form:hidden path="id"/>
 					<tr>
 						<td class="courseprop">CourseName:</td>
 						<td><form:input path="coursename" size="30" /></td>

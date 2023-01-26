@@ -15,6 +15,7 @@ public class Books {
     private Long id;
 
     @NotEmpty(message = "Book name cannot be empty")
+    @Length(min = 3, message = "Author name must be at least 3 characters")
     private String bookName;
 
     @NotEmpty(message = "Author name cannot be empty")
